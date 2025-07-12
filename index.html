@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Nathan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <img src="sprites/cursor.png" alt="" class="cursor" id="cursor">
+
+    <div class="desktop">
+
+        <div class="folders">
+            <div class="folder" onclick="openWindow('folder', 'datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/folder icon.png" alt="" class="icon" style="width: 80px;">
+                <div class="label">Datos bancarios</div>
+            </div>
+            <div class="folder" onclick="openWindow('folder', 'estudios')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/compass icon.png" alt="" class="icon" style="width: 100px;">
+                <div class="label">Estudios</div>
+            </div>
+            <div class="folder" onclick="openWindow('folder', 'trabajos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/ds icon.png" alt="" class="icon" style="width: 110px;">
+                <div class="label">Últimos trabajos</div>
+            </div>
+        </div>
+        <div class="folders">
+            <div class="folder" onclick="openWindow('folder', 'datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/mp3 icon.png" alt="" class="icon" style="width: 120px;">
+                <div class="label">Datos bancarios 2 xd</div>
+            </div>
+        </div>
+
+    </div>  
+
+    <!-- TAMAÑOS
+        Folder: 80
+        Compass: 100
+        Ds: 110
+        Mp3: 120 
+    -->
+
+    <!-- <div class="window">
+        <div class="buttons"></div>
+        <div class="files">
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios</div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="runtime.js"></script>
+</body>
+</html>

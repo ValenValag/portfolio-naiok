@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* MAIN */
+body {
+    overflow: hidden;
+    cursor: none !important;
+}
+
+.cursor {
+    position: absolute;
+    z-index: 10000;
+    height: 30px;
+    pointer-events: none;
+}
+
+/* CONTENEDORES */
+.desktop {
+    display: flex;
+    background-image: url('sprites/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+.folders {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.window {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    /* transform: scale(0); */
+    transition: .1s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.window.show {
+  transform: scale(1);
+}
+
+.window.closing {
+  transform: scale(0);
+}
+
+
+/* CARPETAS */
+.folder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    align-items: center;
+    border-radius: 10px;
+    transition: .1s;
+    user-select: none;
+    gap: 10px;
+    padding: 20px;
+}
+
+.folder .label {
+    font-family: 'VT323';
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+
+.folder:hover {
+    background-color: rgba(240, 248, 255, 0.658);
+}
+
+.folder:active {
+    transform: scale(.97);
+}
+
+/* ARCHIVOS */
+
+.files {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    align-items: center;
+    border-radius: 10px;
+    transition: .1s;
+    user-select: none;
+    text-align: center;
+}
+
+.files .icon {
+    width: 100px;
+}
+
+.files .label {
+    font-family: 'VT323';
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+
+.files:hover {
+    background-color: aliceblue;
+}
+
+.files:active {
+    transform: scale(.97);
+}
