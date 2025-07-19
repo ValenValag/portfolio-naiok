@@ -148,3 +148,28 @@ function closeWindow(app) {
     }
   }
 }
+
+function minWindow(app) {
+  for (let i = 0; i < windows.length; i++) {
+    if (windows[i].app === app) {
+      const winId = windows[i].id;
+      const windowEl = document.getElementById(winId);
+
+      if (windowEl) {
+        // Añade clase de cierre
+        windowEl.classList.add("minimize");
+        windowEl.classList.add("closing");
+
+        // Espera a que termine la animación para eliminar del DOM
+        windowEl.addEventListener('animationend', () => {
+          windowEl.remove();
+        }, { once: true });
+      }
+
+      // Elimina del array de ventanas
+      windows.splice(i, 1);
+      console.log(windows)
+      break;
+    }
+  }
+}

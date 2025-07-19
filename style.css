@@ -57,6 +57,10 @@ body {
   transform: scale(0);
 }
 
+.window.minimize {
+    transform: translateY(1000px);
+}
+
 .files {
     display: flex;
     position: relative;
