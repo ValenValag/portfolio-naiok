@@ -1,17 +1,72 @@
 const types = {
   datos: {
     html: `
-      <div class="buttons"></div>
-      <div class="files">
-        <div class="file">
-          <img src="sprites/file icon.png" alt="" class="icon">
-          <div class="label">Estudios</div>
+      <div class="buttons datosButtons">
+            <div class="close-btn" onclick="closeWindow('datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+            <div class="min-btn" onclick="minWindow('datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
         </div>
-      </div>
+        <div class="files">
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 2</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 3</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 4</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 5</div>
+            </div>
+        </div>
     `,
-    range: [100, 400, 300, 1000], // minY, maxY, minX, maxX
-    size: [700, 500] //width, height
-    }
+    range: [100, 400, 300, 800], // minY, maxY, minX, maxX
+    size: [989, 544], //width, height
+    closeBtnConfig: [50, 30, 929, 8], // width, height, left, top
+    minBtnConfig: [50, 30, 769, 8] // width, height, left, top
+    },
+  estudios: {
+    html: `
+      <div class="buttons datosButtons">
+            <div class="close-btn" onclick="closeWindow('estudios')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+            <div class="min-btn" onclick="minWindow('estudios')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+        </div>
+        <div class="files">
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 2</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 3</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 4</div>
+            </div>
+            <div class="file">
+                <img src="sprites/file icon.png" alt="" class="icon">
+                <div class="label">Estudios 5</div>
+            </div>
+        </div>
+    `,
+    range: [100, 400, 300, 800], // minY, maxY, minX, maxX
+    size: [989, 544], //width, height
+    closeBtnConfig: [50, 30, 929, 8], // width, height, left, top
+    minBtnConfig: [50, 30, 769, 8] // width, height, left, top
+  }
 };
 
 function getRandomInt(min, max) {
@@ -21,13 +76,15 @@ function getRandomInt(min, max) {
 }
 
 let windows = [];
+let indexGiver = 0;
 function openWindow(type, app) {
     for(let win of windows) {
         if (win.app == app){
             return;
         }
     }
-    const newIndex = windows.length + 1;
+    const newIndex = indexGiver + 1;
+    indexGiver = newIndex;
 
     const newWindow = document.createElement("div");
     newWindow.className = "window";
@@ -47,6 +104,7 @@ function openWindow(type, app) {
     window.innerHTML = types[app].html;
 
     requestAnimationFrame(() => {
+        // window.classList.remove("closing");
         window.classList.add("show");
     });
 }
@@ -65,5 +123,28 @@ function changeCursor(pointer) {
   } else {
     cursor.src = "sprites/cursor.png"
   }
-  
+}
+
+function closeWindow(app) {
+  for (let i = 0; i < windows.length; i++) {
+    if (windows[i].app === app) {
+      const winId = windows[i].id;
+      const windowEl = document.getElementById(winId);
+
+      if (windowEl) {
+        // Añade clase de cierre
+        windowEl.classList.add("closing");
+
+        // Espera a que termine la animación para eliminar del DOM
+        windowEl.addEventListener('animationend', () => {
+          windowEl.remove();
+        }, { once: true });
+      }
+
+      // Elimina del array de ventanas
+      windows.splice(i, 1);
+      console.log(windows)
+      break;
+    }
+  }
 }
