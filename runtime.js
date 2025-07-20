@@ -174,3 +174,11 @@ function minWindow(app) {
     }
   }
 }
+
+(() => {
+  const clock = document.getElementById("clock")
+  setInterval(()=>{
+    const date = new Date()
+    clock.innerText = date.toLocaleString()
+  }, 1000)
+})();
