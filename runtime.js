@@ -28,11 +28,11 @@ const types = {
             </div>
         </div>
     `,
-    range: [100, 400, 300, 800], // minY, maxY, minX, maxX
-    size: [989, 544], //width, height
-    closeBtnConfig: [50, 30, 929, 8], // width, height, left, top
-    minBtnConfig: [50, 30, 769, 8] // width, height, left, top
-    },
+    range: [6.25, 25, 18.75, 50], // minY, maxY, minX, maxX -> px/16
+    size: [61.81, 34], // width, height
+    closeBtnConfig: [3.125, 1.875, 58.06, 0.5], // width, height, left, top
+    minBtnConfig: [3.125, 1.875, 48.06, 0.5] // width, height, left, top
+  },
   estudios: {
     html: `
       <div class="buttons datosButtons">
@@ -62,12 +62,13 @@ const types = {
             </div>
         </div>
     `,
-    range: [100, 400, 300, 800], // minY, maxY, minX, maxX
-    size: [989, 544], //width, height
-    closeBtnConfig: [50, 30, 929, 8], // width, height, left, top
-    minBtnConfig: [50, 30, 769, 8] // width, height, left, top
+    range: [6.25, 25, 18.75, 50],
+    size: [61.81, 34],
+    closeBtnConfig: [3.125, 1.875, 58.06, 0.5],
+    minBtnConfig: [3.125, 1.875, 48.06, 0.5]
   }
 };
+
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);   // redondea hacia arriba
@@ -91,11 +92,11 @@ function openWindow(type, app) {
     newWindow.id = "window" + newIndex;
 
     newWindow.style.position = "absolute"; 
-    newWindow.style.top = getRandomInt(types[app].range[0], types[app].range[1]) + "px";
-    newWindow.style.left = getRandomInt(types[app].range[2], types[app].range[3]) + "px";
+    newWindow.style.top = getRandomInt(types[app].range[0], types[app].range[1]) + "rem";
+    newWindow.style.left = getRandomInt(types[app].range[2], types[app].range[3]) + "rem";
     newWindow.style.zIndex = newIndex;
-    newWindow.style.width = types[app].size[0] + "px";
-    newWindow.style.height = types[app].size[1]+"px";
+    newWindow.style.width = types[app].size[0] + "rem";
+    newWindow.style.height = types[app].size[1]+"rem";
 
     const window = document.body.appendChild(newWindow);
 
@@ -111,8 +112,8 @@ function openWindow(type, app) {
 
 const cursor = document.getElementById("cursor");
 window.addEventListener('mousemove', e => {
-  const x = e.pageX - cursor.offsetWidth / 2;
-  const y = e.pageY - cursor.offsetHeight / 2;
+  const x = e.pageX - cursor.offsetWidth / 4;
+  const y = e.pageY - cursor.offsetHeight / 4;
   cursor.style.left = `${x}px`;
   cursor.style.top = `${y}px`;
 })
