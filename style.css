@@ -12,7 +12,6 @@ body {
     background-size: cover;
     background-position: bottom;
     position: absolute;
-    top: -100px;
     width: 100%;
     height: 100%;
     z-index: -10;
@@ -30,9 +29,6 @@ body {
 /* CONTENEDORES */
 .desktop {
     display: flex;
-    /* background-image: url('sprites/bg.png'); */
-    background-size:cover;
-    background-position: center;
     height: 100%;
     width: 100%;
     position: absolute;
