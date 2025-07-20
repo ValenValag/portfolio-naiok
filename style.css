@@ -10,7 +10,7 @@ body {
 .bg {
     background-image: url(sprites/bg.png);
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom !important;
     position: absolute;
     width: 100%;
     height: 100%;
