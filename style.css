@@ -40,7 +40,7 @@ body {
 .desktop {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 98%;
   position: absolute;
   top: 0;
   left: 0;
@@ -107,14 +107,18 @@ body {
   user-select: none;
   gap: 0.625rem; /* 10px */
   padding: 0.625rem; /* 10px */
+  text-align: center;
 }
 
 .folder .label {
+  display: flex;
   font-family: 'VT323';
   font-size: 1.3125rem; /* 21px */
   font-weight: 500;
   color: white;
   text-shadow: 0 0 0.1875rem black;
+  text-align: center;
+  align-items: center;
 }
 
 .folder:hover {
@@ -130,10 +134,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 9.375rem; /* 150px */
   height: 9.375rem;
   margin: 0.625rem; /* 10px */
-  align-items: center;
   border-radius: 0.0625rem; /* 1px */
   transition: 0.1s;
   user-select: none;
