@@ -10,8 +10,7 @@ body {
 .bg {
     background-image: url(sprites/bg.png);
     background-size: cover;
-    background-position: center;
-    background-position-y: -200px;
+    background-position: bottom;
     position: absolute;
     top: -100px;
     width: 100%;
