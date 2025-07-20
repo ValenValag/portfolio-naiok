@@ -55,7 +55,7 @@ body {
 /* CONTENEDORES */
 .desktop {
   display: flex;
-  height: 100%;
+  height: 90%;
   width: 98%;
   position: absolute;
   top: 0;
