@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
+    <div class="bg"></div>
 
     <img src="sprites/cursor.png" alt="" class="cursor" id="cursor">
 
     <div class="desktop">
 
         <div class="folders">
-            <div class="folder" onclick="openWindow('folder', 'datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
-                <img src="sprites/folder icon.png" alt="" class="icon" style="width: 80px;">
-                <div class="label">Datos bancarios</div>
-            </div>
             <div class="folder" onclick="openWindow('folder', 'estudios')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
                 <img src="sprites/compass icon.png" alt="" class="icon" style="width: 100px;">
                 <div class="label">Estudios</div>
@@ -25,12 +22,22 @@
                 <img src="sprites/ds icon.png" alt="" class="icon" style="width: 110px;">
                 <div class="label">Últimos trabajos</div>
             </div>
-        </div>
-        <div class="folders">
             <div class="folder" onclick="openWindow('folder', 'datazos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
                 <img src="sprites/mp3 icon.png" alt="" class="icon" style="width: 120px;">
                 <div class="label">Datos bancarios 2 xd</div>
             </div>
+            <div class="folder" onclick="openWindow('folder', 'datazos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/notepad icon.png" alt="" class="icon" style="width: 100px;">
+                <div class="label">Links</div>
+            </div>
+            
+        </div>
+        <div class="folders">
+            <div class="folder" onclick="openWindow('folder', 'datos')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)">
+                <img src="sprites/folder icon.png" alt="" class="icon" style="width: 80px;">
+                <div class="label">Datos bancarios</div>
+            </div>
+            
         </div>
 
     </div>  
