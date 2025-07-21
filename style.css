@@ -42,8 +42,8 @@ body {
 
 .clock {
   position: fixed;
-  bottom: 1.75rem;
-  right: 2.1875rem;
+  bottom: 2.8%;
+  right: 2%;
   font-family: 'VT323', monospace;
   font-size: clamp(1.25rem, 1.65vw, 1.75rem);
   font-weight: 800;
