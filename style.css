@@ -42,13 +42,13 @@ body {
 
 .clock {
   font-family: 'VT323';
-  font-size: 1.65rem; /* 19px ÷ 16 = 1.1875rem */
+  font-size: clamp(1.25rem, 1.65vw, 1.75rem); /* Escalable entre 1.25rem y 1.75rem */
   font-weight: 800;
   color: white;
   position: absolute;
-  bottom: 1.7625rem; /* 25px ÷ 16 = 1.5625rem */
-  right: 2.1875rem;  /* 35px ÷ 16 = 2.1875rem */
-  text-shadow: 0 0.0625rem 0.03125rem black; /* 1px & 0.5px converted */
+  bottom: 1.75rem;  /* Aproximación redondeada para mejor legibilidad */
+  right: 2.1875rem;
+  text-shadow: 0 0.0625rem 0.0625rem black; /* Valores suavizados */
 }
 
 
