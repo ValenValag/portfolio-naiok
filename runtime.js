@@ -66,7 +66,19 @@ const types = {
     size: [61.81, 34],
     closeBtnConfig: [3.125, 1.875, 58.06, 0.5],
     minBtnConfig: [3.125, 1.875, 48.06, 0.5]
-  }
+  },
+  skills: {
+    html: `
+      <div class="buttons datosButtons">
+            <div class="close-btn" onclick="closeWindow('skills')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+            <div class="min-btn" onclick="minWindow('skills')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+        </div>
+    `,
+    range: [2.25, 14, 8.75, 30],
+    size: [72.125, 45.5],
+    closeBtnConfig: [3.125, 1.875, 58.06, 0.5],
+    minBtnConfig: [3.125, 1.875, 48.06, 0.5]
+  },
 };
 
 
@@ -89,6 +101,12 @@ function openWindow(type, app) {
 
     const newWindow = document.createElement("div");
     newWindow.className = "window";
+    switch(app) {
+      case "skills":
+        newWindow.className = "window skills"
+        console.log("ayuda")
+        break;
+    }
     newWindow.id = "window" + newIndex;
 
     newWindow.style.position = "absolute"; 

@@ -185,6 +185,7 @@ body {
   position: relative;
   left: 58.0625rem; /* 929px */
   top: 0.5rem; /* 8px */
+  background-color: aqua;
 }
 
 .datosButtons .min-btn {
@@ -193,4 +194,14 @@ body {
   position: relative;
   left: 48.0625rem; /* 769px */
   top: 0.5rem;
+  background-color: aquamarine;
+}
+
+
+.skills{
+  background-image: url(sprites/skills\ window.png);
+  background-position: center;
+  background-size: cover;
+  width: 72.125rem;
+  height: 45.5rem;
 }
