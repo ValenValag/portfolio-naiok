@@ -41,16 +41,16 @@ body {
 }
 
 .clock {
-  font-family: 'VT323';
-  font-size: clamp(1.25rem, 1.65vw, 1.75rem); /* Escalable entre 1.25rem y 1.75rem */
+  position: fixed;
+  bottom: 1.75rem;
+  right: 2.1875rem;
+  font-family: 'VT323', monospace;
+  font-size: clamp(1.25rem, 1.65vw, 1.75rem);
   font-weight: 800;
   color: white;
-  position: absolute;
-  bottom: 1.75rem;  /* Aproximación redondeada para mejor legibilidad */
-  right: 2.1875rem;
-  text-shadow: 0 0.0625rem 0.0625rem black; /* Valores suavizados */
+  text-shadow: 0 0.0625rem 0.0625rem black;
+  z-index: 1000;
 }
-
 
 /* CONTENEDORES */
 .desktop {
