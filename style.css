@@ -185,7 +185,6 @@ body {
   position: relative;
   left: 58.0625rem; /* 929px */
   top: 0.5rem; /* 8px */
-  background-color: aqua;
 }
 
 .datosButtons .min-btn {
@@ -194,7 +193,6 @@ body {
   position: relative;
   left: 48.0625rem; /* 769px */
   top: 0.5rem;
-  background-color: aquamarine;
 }
 
 
@@ -204,4 +202,20 @@ body {
   background-size: cover;
   width: 72.125rem;
   height: 45.5rem;
+}
+
+.skills .close-btn {
+  width: 3.125rem; /* 50px */
+  height: 1.875rem; /* 30px */
+  position: relative;
+  left: 68.5625rem; /* 929px */
+  top: 0.3rem; /* 8px */
+}
+
+.skills .min-btn {
+  width: 3.125rem;
+  height: 1.875rem;
+  position: relative;
+  left: 58.5625rem; /* 769px */
+  top: 0.5rem;
 }

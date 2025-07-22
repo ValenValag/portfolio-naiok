@@ -69,7 +69,7 @@ const types = {
   },
   skills: {
     html: `
-      <div class="buttons datosButtons">
+      <div class="buttons">
             <div class="close-btn" onclick="closeWindow('skills')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
             <div class="min-btn" onclick="minWindow('skills')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
         </div>
