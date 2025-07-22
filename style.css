@@ -219,3 +219,11 @@ body {
   left: 58.5625rem; /* 769px */
   top: 0.5rem;
 }
+
+.quotes{
+  background-image: url(quotes/1.png);
+  background-position: center;
+  background-size: cover;
+  width:27.75rem;
+  height: 16.3125rem;
+}

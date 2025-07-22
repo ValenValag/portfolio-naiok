@@ -79,6 +79,18 @@ const types = {
     closeBtnConfig: [3.125, 1.875, 58.06, 0.5],
     minBtnConfig: [3.125, 1.875, 48.06, 0.5]
   },
+  quotes: {
+    html: `
+      <div class="buttons">
+            <div class="close-btn" onclick="closeWindow('quotes')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+            <div class="min-btn" onclick="minWindow('quotes')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
+        </div>
+    `,
+    range: [2.25, 14, 8.75, 30],
+    size: [27.75, 16.3125],
+    closeBtnConfig: [3.125, 1.875, 58.06, 0.5],
+    minBtnConfig: [3.125, 1.875, 48.06, 0.5]
+  },
 };
 
 
@@ -104,7 +116,10 @@ function openWindow(type, app) {
     switch(app) {
       case "skills":
         newWindow.className = "window skills"
-        console.log("ayuda")
+        break;
+      case "quotes":
+        newWindow.className = "window quotes"
+        newWindow.style.backgroundImage = "url(quotes/" + getRandomInt(1,5) + ".png)"
         break;
     }
     newWindow.id = "window" + newIndex;
