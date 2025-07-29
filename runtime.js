@@ -40,7 +40,7 @@ const types = {
             <div class="min-btn" onclick="minWindow('estudios')" onmouseover="changeCursor(1)" onmouseleave="changeCursor(0)"></div>
         </div>
         <div class="files">
-            <div class="file">
+            <div class="file" onclick="openWindow('folder', 'quotes')">
                 <img src="sprites/file icon.png" alt="" class="icon">
                 <div class="label">Estudios</div>
             </div>
