@@ -243,3 +243,53 @@ body {
   left: 14.0625rem; /* 769px */
   top: 0.5rem;
 }
+
+.links{
+  background-image: url(sprites/links\ window.png);
+  background-position: center;
+  background-size: cover;
+  width: 27.9375rem;
+  height: 22.875rem !important;
+}
+
+.links .close-btn {
+  width: 3.125rem; /* 50px */
+  height: 1.875rem; /* 30px */
+  position: relative;
+  left: 24.0625rem; /* 929px */
+  top: 0.3rem; /* 8px */
+}
+
+
+.links .min-btn {
+  width: 3.125rem;
+  height: 1.875rem;
+  position: relative;
+  left: 14.0625rem; /* 769px */
+  top: 0.5rem;
+}
+
+.juegos{
+  background-image: url(sprites/games\ window.png);
+  background-position: center;
+  background-size: cover;
+  width: 36.5rem !important;
+  height: 27.6875rem !important;
+}
+
+.juegos .close-btn {
+  width: 3.125rem; /* 50px */
+  height: 1.875rem; /* 30px */
+  position: relative;
+  left: 32.8625rem; /* 929px */
+  top: 0.3rem; /* 8px */
+}
+
+
+.juegos .min-btn {
+  width: 3.125rem;
+  height: 1.875rem;
+  position: relative;
+  left: 22.8625rem; /* 769px */
+  top: 0.5rem;
+}
