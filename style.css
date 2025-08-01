@@ -43,7 +43,7 @@ body {
 .clock {
   position: fixed;
   bottom: 2.8%;
-  right: 2%;
+  right: 3%;
   font-family: 'VT323', monospace;
   font-size: clamp(1.25rem, 1.65vw, 1.75rem);
   font-weight: 800;
@@ -292,4 +292,10 @@ body {
   position: relative;
   left: 22.8625rem; /* 769px */
   top: 0.5rem;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

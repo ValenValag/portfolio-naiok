@@ -242,6 +242,10 @@ function minWindow(app) {
   const clock = document.getElementById("clock")
   setInterval(()=>{
     const date = new Date()
-    clock.innerText = date.toLocaleString()
+    clock.innerText = date.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
   }, 1000)
 })();
